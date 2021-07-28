@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Patient Information Form</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        .btn {
+            background-color: #58be35;
+            color: white;
+        }
+        .btn:hover {
+            background-color: #459928;
+            color: white;
+        }
+        .nav-link > .material-icons {
+            font-size: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 14px;
+        }
+        .material-icons:hover {
+            color: #094e8c;
+        }
+        .process {
+            height: 100vh;
+        }
+        img {
+            height: 100vh;
+            margin-left: 30px;
+        }
+        .flowchart, .algo, .pseudo, h2 {
+            margin:auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="row">
+
+        <div class="pt-5 container-fluid col-1" style="background-color: #0194dd;">
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-white">
+                    <span class="material-icons">home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="process.html" class="nav-link text-white">
+                    <span class="material-icons">view_list</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="patient form.html" class="nav-link text-white"> 
+                    <span class="material-icons">assignment</span> 
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="record.html" class="nav-link text-white"> 
+                    <span class="material-icons">account_circle</span> 
+                </a>
+            </li>
+        </ul>
+        </div>
+    
+        <div class="col process container-fluid">
+            <div class="flowchart">
+            <h1 class="mb-3 mt-5 text-center">Clinical Care Flowchart</h1>
+            <img src="images/flowchart.png" class="mb-5 ps-5" style="width: 90%; height: 90%;">
+            </div>
+            
+            <div class="mb-5 algo col-8 bg-light">
+            <h2 class="ps-5 mb-3 mt-5">Algorithm</h2>
+            <ol class="ps-5 mb-5 list-group list-group-numbered">
+                <li>Patient arrives</li>
+                <li>Show online appointment/registration</li>
+                <li>Check for COVID symptoms</li>
+                <li>Proceed to Patient Reception and Processing</li>
+                <li>Check old record / Fill-up new form</li>
+                <li>Record current health condition</li>
+                <li>Check available doctor</li>
+                <li>Assign pattient to doctor</li>
+                <li>Get assessed by doctor</li>
+                <li>Check if patient needs laboratory or medication</li>
+                <li>Process billing and payment</li>
+                <li>Patient leaves</li>
+            </ol>
+            </div>
+            
+            <div class="mb-5 pseudo col-8 bg-light">
+            <h2 class="ps-5 mb-3 mt-5">Pseudocode</h2>
+            <ul class="ps-5 mb-5">
+                <li>BEGIN</li>
+                <li>CHECK for online appointment</li>
+                    <li>REPEAT-UNTIL patient has registered online</li>
+                <li>IF with COVID symptoms</li>
+                    <li class="ps-3">Cannot accommodate patient</li>
+                    <li class="ps-3">Patient leaves</li>
+                    <li class="ps-3">END</li>
+                <li>ELSE proceed to Patient Reception & Processing</li>   
+                <li>ENDIF</li>
+                <li>IF new patient</li>
+                    <li class="ps-3">INPUT fill-up patient form</li>
+                    <li>ELSE OUTPUT retrieve existing patient form</li>   
+                <li>ENDIF</li>
+                <li>Record current health conditions</li>
+                <li>WHILE no available doctor</li>
+                    <li class="ps-3">Wait for doctor</li>
+                <li>ENDWHILE</li>
+                <li>Assign patient to doctor</li>
+                <li>Get assessed by doctor</li>
+                <li>IF patient needs laboratory</li>
+                    <li class="ps-3">Proceed to examination area</li>
+                    <li class="ps-3">WHILE results are not available</li>
+                        <li class="ps-5">Wait for results</li>
+                    <li class="ps-3">ENDWHILE</li>
+                    <li class="ps-3">Get results</li>
+                    <li class="ps-3">Get assessed by doctor</li>
+                    <li class="ps-3">IF patient needs medication</li>
+                        <li class="ps-5">Get prescription</li>
+                    <li class="ps-3">ELSE process billing & payment</li>
+                    <li class="ps-3">ENDIF</li>
+                    <li class="ps-3">Pay final amount</li>
+                    <li class="ps-3">END</li>
+                <li>ELSE IF patient needs medication</li>
+                    <li class="ps-5">Get prescription</li>
+                    <li class="ps-5">Process billing & payment</li>
+                    <li class="ps-5">Pay final amount</li>
+                    <li class="ps-5">ELSE process billing & payment</li> 
+                    <li class="ps-5">Pay final amount</li>
+                    <li class="ps-5">ENDIF</li>  
+                <li>END</li>
+            </ul>
+            </div>
+        
+    </div>
+
+    </div>
+</body>
+</html>
